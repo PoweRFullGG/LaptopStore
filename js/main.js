@@ -92,10 +92,10 @@ function OnClickButtonDiscount_3() {
     }
 }
 
-function OnClickBuyButton (modelNB, priceNB, discountPriceNB) {
+function OnClickBuyButton (modelNB, priceNB, discountPriceNB, bool) {
     const model = modelNB;
     let price;
-    if (!bTNDiscount1Bool) {
+    if (!bool) {
         price = priceNB;
     } else {
         price = discountPriceNB;
@@ -105,13 +105,13 @@ function OnClickBuyButton (modelNB, priceNB, discountPriceNB) {
 }
 
 function OnClickBuyButton_1 () {
-    OnClickBuyButton("Ноутбук Dell Inspiron 15", "₽49,990", "₽29,500")
+    OnClickBuyButton("Ноутбук Dell Inspiron 15", "₽49,990", "₽29,500", bTNDiscount1Bool)
 }
 
 function OnClickBuyButton_2 () {
-    OnClickBuyButton("Ноутбук HP Pavilion 14", "₽54,990", "₽54,990")
+    OnClickBuyButton("Ноутбук HP Pavilion 14", "₽54,990", "₽45,500", bTNDiscount2Bool)
 }
 
 function OnClickBuyButton_3 () {
-    OnClickBuyButton("Ноутбук Lenovo ThinkPad X1", "₽129,990", "₽89,990")
+    OnClickBuyButton("Ноутбук Lenovo ThinkPad X1", "₽129,990", "₽89,990", bTNDiscount3Bool)
 }
